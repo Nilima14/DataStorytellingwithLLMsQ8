@@ -33,3 +33,4 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig("trend.png", dpi=100)
 plt.close()
+# Analysis script
