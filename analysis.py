@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from decimal import Decimal, ROUND_HALF_UP
 
 # Quarterly MRR Growth Data
 data = {
@@ -10,9 +11,11 @@ data = {
 # Create DataFrame
 df = pd.DataFrame(data)
 
-# Calculate average
-average_growth = df["MRR_Growth"].mean()
-print(f"Average MRR Growth: {average_growth:.2f}")
+# Use Decimal for exact precision
+values = [Decimal(str(x)) for x in df["MRR_Growth"]]
+average_growth = (sum(values) / Decimal(len(values))).quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+print(f"Average MRR Growth: {average_growth}")  # Will print 8.56 exactly
 
 # Industry target
 industry_target = 15
@@ -27,5 +30,5 @@ plt.ylabel("MRR Growth")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
-plt.savefig("trend.png")  # Save chart for README
-plt.show()
+plt.savefig("trend.png", dpi=100)
+plt.close()
