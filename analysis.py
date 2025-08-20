@@ -1,3 +1,4 @@
+# Analysis script
 import pandas as pd
 import matplotlib.pyplot as plt
 from decimal import Decimal, ROUND_HALF_UP
