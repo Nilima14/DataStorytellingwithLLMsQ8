@@ -1,3 +1,4 @@
+# Analysis script
 import pandas as pd
 import matplotlib.pyplot as plt
 from decimal import Decimal, ROUND_HALF_UP
@@ -32,3 +33,5 @@ plt.grid(True)
 plt.tight_layout()
 plt.savefig("trend.png", dpi=100)
 plt.close()
+# Analysis script
+# included in PR

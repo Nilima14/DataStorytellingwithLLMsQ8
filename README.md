@@ -35,3 +35,4 @@ To close the gap and reach the industry target of 15, we recommend:
 Below is the comparison of **Quarterly Growth vs Industry Target**:
 
 ![Trend](trend.png)
+LLM-assisted analysis added.
